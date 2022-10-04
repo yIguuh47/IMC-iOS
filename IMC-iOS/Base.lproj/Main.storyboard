@@ -22,22 +22,30 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-PN-8mX">
                                         <rect key="frame" x="10" y="0.0" width="394" height="186.66666666666666"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrC-1O-qmz">
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrC-1O-qmz">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="186.66666666666666"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="Masculino"/>
+                                                <connections>
+                                                    <action selector="tipPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vw-lC-vTB"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-N6-roF">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-N6-roF">
                                                 <rect key="frame" x="202" y="0.0" width="192" height="186.66666666666666"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="Feminino"/>
+                                                <connections>
+                                                    <action selector="tipPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFb-ZU-Dw0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zq1-g8-TCA" userLabel="Altura">
                                         <rect key="frame" x="10" y="196.66666666666669" width="394" height="186.66666666666669"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.84" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-QZ-MtT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-QZ-MtT">
                                                 <rect key="frame" x="140" y="63.333333333333343" width="114" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="AL6-w6-r96"/>
@@ -45,8 +53,11 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d7x-cx-Q1n">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.6000000000000001" minValue="0.0" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="d7x-cx-Q1n">
                                                 <rect key="frame" x="18" y="133.33333333333334" width="358" height="31"/>
+                                                <connections>
+                                                    <action selector="alturaSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="e6Q-Go-o9O"/>
+                                                </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ALTURA" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-Gg-gYG">
                                                 <rect key="frame" x="156.66666666666666" y="19.333333333333343" width="81" height="34"/>
@@ -101,11 +112,17 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                                 <state key="normal" title="+"/>
+                                                                <connections>
+                                                                    <action selector="addPesoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gai-Al-pe7"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-7U-vGG">
                                                                 <rect key="frame" x="40" y="0.0" width="30" height="32"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                                 <state key="normal" title="-"/>
+                                                                <connections>
+                                                                    <action selector="removePesoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2W-v8-Orl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -135,11 +152,17 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                                 <state key="normal" title="+"/>
+                                                                <connections>
+                                                                    <action selector="addIdadeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDw-At-sfU"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPX-cD-LqI">
                                                                 <rect key="frame" x="30" y="0.0" width="30" height="32"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                                 <state key="normal" title="-"/>
+                                                                <connections>
+                                                                    <action selector="removeIdadeBnt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9E-iR-QqJ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -194,13 +217,10 @@
                                 <state key="normal" title="CALCULAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="0OC-x3-YUW" kind="show" id="3Pd-bA-vjz"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.69091303661616155" green="0.69091303661616155" blue="0.69091303661616155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91818576388888884" green="0.91818576388888884" blue="0.91818576388888884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="U7H-6O-bfb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0IS-0S-JMU"/>
                             <constraint firstAttribute="bottom" secondItem="U7H-6O-bfb" secondAttribute="bottom" id="BQv-6a-nTK"/>
@@ -212,12 +232,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calculadora IMC" id="jXc-DO-ca1"/>
+                    <connections>
+                        <outlet property="alturaLbl" destination="8dI-QZ-MtT" id="Ecc-nS-kV1"/>
+                        <outlet property="bgAltura" destination="Zq1-g8-TCA" id="Hsm-be-3Kd"/>
+                        <outlet property="bgIdade" destination="BO6-EQ-bdB" id="7Ph-R4-gXM"/>
+                        <outlet property="bgPeso" destination="JLo-G0-hom" id="68O-fm-dNL"/>
+                        <outlet property="calcularBnt" destination="U7H-6O-bfb" id="90I-Un-Loj"/>
+                        <outlet property="idadeLbl" destination="IRj-jz-aps" id="VHp-fJ-2Ub"/>
+                        <outlet property="menBtn" destination="IrC-1O-qmz" id="VSA-jg-Kwa"/>
+                        <outlet property="pesoLbl" destination="rva-MB-iXW" id="LCs-Ph-hX8"/>
+                        <outlet property="womenBtn" destination="VtM-N6-roF" id="NoY-My-VEv"/>
+                        <segue destination="0OC-x3-YUW" kind="show" id="Oiw-Qk-OkC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.043478260869566" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-3" y="87"/>
         </scene>
-        <!--View Controller-->
+        <!--Resultado-->
         <scene sceneID="PDP-wd-2Qf">
             <objects>
                 <viewController id="0OC-x3-YUW" sceneMemberID="viewController">
@@ -314,7 +346,7 @@
                             <constraint firstItem="pKd-8D-DbX" firstAttribute="top" secondItem="QfL-iT-YYn" secondAttribute="top" constant="10" id="eP2-5p-1Px"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qly-ds-sKo"/>
+                    <navigationItem key="navigationItem" title="Resultado" id="qly-ds-sKo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPV-8V-TZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
